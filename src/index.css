@@ -9,54 +9,54 @@ All colors MUST be HSL.
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 220 25% 15%;
+    --foreground: 220 30% 15%;
 
-    /* i9 Brand Colors */
-    --i9-blue: 210 100% 45%;
-    --i9-orange: 25 95% 53%;
+    /* Inove Brand Colors - Turquesa brilhante e roxo escuro */
+    --inove-turquoise: 170 100% 42%;
+    --inove-purple: 255 65% 15%;
     
-    /* SuperRico Brand Colors */
-    --superrico-red: 355 85% 50%;
-    --superrico-green: 142 71% 45%;
+    /* SuperRico Brand Colors - Verdes menta */
+    --superrico-mint: 155 45% 75%;
+    --superrico-green: 165 80% 35%;
     
-    /* Primary - i9 Blue */
-    --primary: 210 100% 45%;
+    /* Primary - Turquesa do Inove */
+    --primary: 170 100% 42%;
     --primary-foreground: 0 0% 100%;
     
-    /* Secondary - SuperRico Red */
-    --secondary: 355 85% 50%;
+    /* Secondary - Verde escuro SuperRico */
+    --secondary: 165 80% 35%;
     --secondary-foreground: 0 0% 100%;
     
-    /* Accent - i9 Orange */
-    --accent: 25 95% 53%;
-    --accent-foreground: 0 0% 100%;
+    /* Accent - Verde menta SuperRico */
+    --accent: 155 45% 75%;
+    --accent-foreground: 165 80% 20%;
     
-    /* Success - SuperRico Green */
-    --success: 142 71% 45%;
+    /* Success - Verde vibrante */
+    --success: 155 70% 45%;
     --success-foreground: 0 0% 100%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 25% 15%;
+    --card-foreground: 220 30% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 25% 15%;
+    --popover-foreground: 220 30% 15%;
 
-    --muted: 210 40% 96%;
+    --muted: 155 30% 96%;
     --muted-foreground: 220 15% 45%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 210 100% 45%;
+    --border: 155 20% 88%;
+    --input: 155 20% 88%;
+    --ring: 170 100% 42%;
 
     --radius: 0.75rem;
     
     /* Custom Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--i9-blue)) 0%, hsl(var(--superrico-red)) 100%);
-    --gradient-cta: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(var(--secondary)) 100%);
-    --gradient-section: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 40% 98%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(var(--inove-turquoise)) 0%, hsl(var(--superrico-green)) 100%);
+    --gradient-cta: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
+    --gradient-section: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(155 30% 98%) 100%);
     
     /* Shadows */
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
@@ -86,36 +86,36 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 220 25% 8%;
+    --background: 255 65% 10%;
     --foreground: 0 0% 98%;
 
-    --card: 220 25% 10%;
+    --card: 255 55% 12%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 220 25% 10%;
+    --popover: 255 55% 12%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 210 100% 50%;
+    --primary: 170 100% 45%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 355 85% 55%;
+    --secondary: 165 80% 40%;
     --secondary-foreground: 0 0% 100%;
 
-    --accent: 25 95% 58%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 155 50% 70%;
+    --accent-foreground: 165 80% 15%;
 
-    --success: 142 71% 50%;
+    --success: 155 70% 50%;
     --success-foreground: 0 0% 100%;
 
-    --muted: 220 25% 15%;
-    --muted-foreground: 220 15% 65%;
+    --muted: 255 40% 18%;
+    --muted-foreground: 220 15% 70%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 220 25% 20%;
-    --input: 220 25% 20%;
-    --ring: 210 100% 50%;
+    --border: 255 30% 22%;
+    --input: 255 30% 22%;
+    --ring: 170 100% 45%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
