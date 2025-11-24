@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import logoI9 from '@/assets/logo-i9.png';
-import logoSuperRico from '@/assets/logo-superrico.png';
+import logoI9 from '@/assets/logo-i9-new.png';
+import logoSuperRico from '@/assets/logo-superrico-new.png';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -36,16 +36,16 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-background/95 backdrop-blur-md shadow-md' : 'bg-transparent'
+        isScrolled ? 'bg-background/95 backdrop-blur-md shadow-md' : 'bg-gradient-to-r from-primary/10 to-secondary/10 backdrop-blur-sm'
       }`}
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logos */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg shadow-sm">
             <img src={logoI9} alt="i9 Educação" className="h-10 md:h-12 w-auto object-contain" />
-            <span className="text-muted-foreground font-bold text-xl">+</span>
-            <img src={logoSuperRico} alt="SuperRico" className="h-10 md:h-12 w-auto object-contain" />
+            <span className="text-primary font-bold text-xl">+</span>
+            <img src={logoSuperRico} alt="SuperRico" className="h-8 md:h-10 w-auto object-contain" />
           </div>
 
           {/* Desktop Navigation */}
