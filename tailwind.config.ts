@@ -51,12 +51,12 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        i9: {
-          blue: "hsl(var(--i9-blue))",
-          orange: "hsl(var(--i9-orange))",
+        inove: {
+          turquoise: "hsl(var(--inove-turquoise))",
+          purple: "hsl(var(--inove-purple))",
         },
         superrico: {
-          red: "hsl(var(--superrico-red))",
+          mint: "hsl(var(--superrico-mint))",
           green: "hsl(var(--superrico-green))",
         },
         sidebar: {
