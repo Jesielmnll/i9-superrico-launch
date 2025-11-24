@@ -114,11 +114,12 @@ const ContactForm = () => {
                   </p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-6" data-form-name="contact-form">
                   <div className="space-y-2">
                     <Label htmlFor="name">Nome Completo *</Label>
                     <Input
                       id="name"
+                      name="name"
                       type="text"
                       placeholder="Seu nome completo"
                       value={formData.name}
@@ -132,6 +133,7 @@ const ContactForm = () => {
                     <Label htmlFor="email">E-mail *</Label>
                     <Input
                       id="email"
+                      name="email"
                       type="email"
                       placeholder="seu@email.com"
                       value={formData.email}
@@ -142,9 +144,10 @@ const ContactForm = () => {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="phone">WhatsApp *</Label>
+                    <Label htmlFor="mobile_phone">WhatsApp *</Label>
                     <Input
-                      id="phone"
+                      id="mobile_phone"
+                      name="mobile_phone"
                       type="tel"
                       placeholder="(00) 00000-0000"
                       value={formData.phone}
@@ -156,15 +159,16 @@ const ContactForm = () => {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="education">Qual seu nível de formação atual? *</Label>
+                    <Label htmlFor="cf_education_level">Qual seu nível de formação atual? *</Label>
                     <Select
+                      name="cf_education_level"
                       value={formData.education}
                       onValueChange={(value) =>
                         setFormData({ ...formData, education: value })
                       }
                       required
                     >
-                      <SelectTrigger className="h-12">
+                      <SelectTrigger id="cf_education_level" className="h-12">
                         <SelectValue placeholder="Selecione sua formação" />
                       </SelectTrigger>
                       <SelectContent className="bg-background z-50">
@@ -180,6 +184,7 @@ const ContactForm = () => {
                         <SelectItem value="doutorado">Doutorado</SelectItem>
                       </SelectContent>
                     </Select>
+                    <input type="hidden" name="cf_education_level_text" value={formData.education} />
                   </div>
 
                   <Button

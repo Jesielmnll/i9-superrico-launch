@@ -51,9 +51,9 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        inove: {
-          turquoise: "hsl(var(--inove-turquoise))",
-          purple: "hsl(var(--inove-purple))",
+        i9: {
+          turquoise: "hsl(var(--i9-turquoise))",
+          blue: "hsl(var(--i9-blue))",
         },
         superrico: {
           mint: "hsl(var(--superrico-mint))",

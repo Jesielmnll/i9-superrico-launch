@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import logoI9 from '@/assets/logo-i9.png';
+import logoSuperRico from '@/assets/logo-superrico.png';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -40,16 +42,10 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logos */}
-          <div className="flex items-center gap-6">
-            <div className="flex items-center gap-3">
-              <div className="h-10 w-32 bg-primary/10 rounded flex items-center justify-center">
-                <span className="text-primary font-bold text-lg">i9 Educação</span>
-              </div>
-              <span className="text-muted-foreground font-bold">+</span>
-              <div className="h-10 w-32 bg-secondary/10 rounded flex items-center justify-center">
-                <span className="text-secondary font-bold text-lg">SuperRico</span>
-              </div>
-            </div>
+          <div className="flex items-center gap-3">
+            <img src={logoI9} alt="i9 Educação" className="h-10 md:h-12 w-auto object-contain" />
+            <span className="text-muted-foreground font-bold text-xl">+</span>
+            <img src={logoSuperRico} alt="SuperRico" className="h-10 md:h-12 w-auto object-contain" />
           </div>
 
           {/* Desktop Navigation */}

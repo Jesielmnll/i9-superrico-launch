@@ -11,24 +11,24 @@ All colors MUST be HSL.
     --background: 0 0% 100%;
     --foreground: 220 30% 15%;
 
-    /* Inove Brand Colors - Turquesa brilhante e roxo escuro */
-    --inove-turquoise: 170 100% 42%;
-    --inove-purple: 255 65% 15%;
+    /* i9 Brand Colors - Turquesa brilhante */
+    --i9-turquoise: 170 100% 42%;
+    --i9-blue: 195 100% 50%;
     
-    /* SuperRico Brand Colors - Verdes menta */
+    /* SuperRico Brand Colors - Verdes */
     --superrico-mint: 155 45% 75%;
     --superrico-green: 165 80% 35%;
     
-    /* Primary - Turquesa do Inove */
+    /* Primary - Turquesa i9 */
     --primary: 170 100% 42%;
     --primary-foreground: 0 0% 100%;
     
-    /* Secondary - Verde escuro SuperRico */
+    /* Secondary - Verde SuperRico */
     --secondary: 165 80% 35%;
     --secondary-foreground: 0 0% 100%;
     
-    /* Accent - Verde menta SuperRico */
-    --accent: 155 45% 75%;
+    /* Accent - Verde menta */
+    --accent: 155 50% 68%;
     --accent-foreground: 165 80% 20%;
     
     /* Success - Verde vibrante */
@@ -54,7 +54,7 @@ All colors MUST be HSL.
     --radius: 0.75rem;
     
     /* Custom Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--inove-turquoise)) 0%, hsl(var(--superrico-green)) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(var(--i9-turquoise)) 0%, hsl(var(--superrico-green)) 100%);
     --gradient-cta: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
     --gradient-section: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(155 30% 98%) 100%);
     
