@@ -1,36 +1,41 @@
 import { motion } from 'framer-motion';
-import { GraduationCap, Target, Network, Award } from 'lucide-react';
+import { TrendingDown, DollarSign, TrendingUp, Shield, CheckCircle2 } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+
+const scrollToSection = (id: string) => {
+  const element = document.getElementById(id);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+};
 
 const SolutionSection = () => {
   const features = [
     {
-      icon: GraduationCap,
-      title: 'Excelência Acadêmica i9',
-      description:
-        'Instituição reconhecida pelo MEC com mais de 15 anos de experiência em educação executiva e formação de profissionais de alta performance.',
+      icon: TrendingDown,
+      title: 'Domar a Renda Variável',
+      description: 'Estratégias práticas para quem não tem salário fixo.',
     },
     {
-      icon: Target,
-      title: 'Metodologia Prática SuperRico',
-      description:
-        'Aprenda com a metodologia que já transformou mais de 50.000 vidas através da educação financeira prática e aplicável no dia a dia.',
+      icon: DollarSign,
+      title: 'Fluxo de Caixa Blindado',
+      description: 'Como organizar sua vida financeira e parar de vender o almoço para pagar o jantar.',
     },
     {
-      icon: Network,
-      title: 'Networking Exclusivo',
-      description:
-        'Faça parte de uma comunidade de especialistas, conecte-se com profissionais do mercado e amplie suas oportunidades de negócio.',
+      icon: TrendingUp,
+      title: 'De Ativo para Passivo',
+      description: 'Aprenda a transformar sua força de trabalho (renda ativa) em investimentos que trabalham por você (renda passiva).',
     },
     {
-      icon: Award,
-      title: 'Certificação Reconhecida',
-      description:
-        'Receba certificado com validade nacional, reconhecido por instituições financeiras e pelo mercado de consultoria.',
+      icon: Shield,
+      title: 'Proteção Patrimonial',
+      description: 'Como proteger sua capacidade de gerar renda ao longo de toda a vida.',
     },
   ];
 
   return (
-    <section className="py-20 gradient-section">
+    <section id="solucao" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -39,72 +44,63 @@ const SolutionSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            A união que <span className="text-gradient">transforma carreiras</span>
+          <div className="inline-block bg-primary/10 text-primary px-6 py-2 rounded-full font-semibold mb-6">
+            O Método Exclusivo
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <span className="text-gradient">Curva de Vitalidade Financeira®</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Combinamos a solidez acadêmica com a prática do mercado para formar
-            os melhores profissionais em saúde financeira do Brasil.
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            Neste curso intensivo de dois dias, utilizaremos a metodologia prática da SuperRico para te ensinar a:
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {features.map((feature, index) => {
-            const isEven = index % 2 === 0;
-
-            return (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: isEven ? -30 : 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.15, duration: 0.6 }}
-                className="flex gap-4"
-              >
-                <div className="flex-shrink-0">
-                  <div className="w-14 h-14 rounded-xl bg-gradient-cta flex items-center justify-center shadow-lg">
-                    <feature.icon className="w-7 h-7 text-white" />
+        <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-12">
+          {features.map((feature, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1, duration: 0.6 }}
+            >
+              <Card className="h-full hover:shadow-xl transition-all duration-300 border-2 border-primary/20 bg-gradient-to-br from-background to-muted/30">
+                <CardContent className="p-8">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <feature.icon className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <div className="flex items-center gap-2 mb-2">
+                        <CheckCircle2 className="w-5 h-5 text-primary" />
+                        <h3 className="text-xl font-bold">{feature.title}</h3>
+                      </div>
+                      <p className="text-muted-foreground">
+                        {feature.description}
+                      </p>
+                    </div>
                   </div>
-                </div>
-
-                <div>
-                  <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
-                  <p className="text-muted-foreground">{feature.description}</p>
-                </div>
-              </motion.div>
-            );
-          })}
+                </CardContent>
+              </Card>
+            </motion.div>
+          ))}
         </div>
 
-        {/* Partnership Visual */}
+        {/* CTA Button */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.4, duration: 0.6 }}
-          className="mt-16 p-8 bg-card border border-border rounded-2xl shadow-lg max-w-4xl mx-auto"
+          className="text-center"
         >
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div className="text-center md:text-left">
-              <div className="inline-block px-6 py-3 bg-primary/10 rounded-full mb-4">
-                <span className="text-2xl font-bold text-primary">i9 Educação</span>
-              </div>
-              <p className="text-muted-foreground">
-                Instituição de ensino superior com certificação MEC e excelência
-                acadêmica reconhecida nacionalmente.
-              </p>
-            </div>
-
-            <div className="text-center md:text-left">
-              <div className="inline-block px-6 py-3 bg-secondary/10 rounded-full mb-4">
-                <span className="text-2xl font-bold text-secondary">SuperRico</span>
-              </div>
-              <p className="text-muted-foreground">
-                Metodologia exclusiva de saúde financeira com resultados
-                comprovados em mais de 50.000 alunos.
-              </p>
-            </div>
-          </div>
+          <Button
+            size="lg"
+            onClick={() => scrollToSection('contato')}
+            className="gradient-cta text-lg px-8 py-6 hover:opacity-90 transition-opacity"
+          >
+            INSCREVER-ME AGORA
+          </Button>
         </motion.div>
       </div>
     </section>
