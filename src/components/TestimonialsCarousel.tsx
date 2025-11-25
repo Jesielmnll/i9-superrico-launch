@@ -11,39 +11,52 @@ import 'swiper/css/pagination';
 const TestimonialsCarousel = () => {
   const testimonials = [
     {
-      name: 'João Pedro Almeida',
-      role: 'Planejador Financeiro Autônomo',
+      name: 'Daniela Coelho',
+      role: 'Local Guide · 86 reviews · 352 photos',
       content:
-        'A metodologia SuperRico aliada à base acadêmica da i9 transformou minha carreira. Em 6 meses já estava atendendo 15 clientes e faturando R$ 18.000 mensais.',
+        'Gostaria de registrar meu reconhecimento pelo excelente atendimento que recebi. Os funcionários sempre muito atenciosos, prestativos e demonstram grande empenho em atender minhas solicitações com agilidade e cordialidade. O atendimento via WhatsApp também merece destaque pela eficiência e prontidão nas respostas.',
       rating: 5,
+      timeAgo: '4 months ago'
     },
     {
-      name: 'Marina Santos',
-      role: 'Consultora Financeira',
+      name: 'Elci Lemes Pereira Junior',
+      role: '1 review',
       content:
-        'O curso me deu toda a segurança técnica e prática para atender desde investidores iniciantes até clientes de alta renda. Recomendo para todos que querem seriedade na profissão.',
+        'Atendimento excelente! Fui muito bem atendido pela equipe da Faculdade i9. O atendimento foi rápido, eficaz e totalmente personalizado, com atenção aos detalhes e muita cordialidade. Parabéns à equipe pelo profissionalismo!',
       rating: 5,
+      timeAgo: '4 months ago'
     },
     {
-      name: 'Ricardo Fernandes',
-      role: 'Gestor de Patrimônio',
+      name: 'CRISTIANE GOMES',
+      role: '1 review',
       content:
-        'Trabalho no mercado há 10 anos e o curso me trouxe atualizações importantes e uma visão mais holística sobre saúde financeira. Valeu cada minuto investido.',
+        'A Instituição i9, possui excelentes cursos, ótimos professores que ensinam de forma prática, sem contar o valor dos cursos e pós graduações cabem no seu bolso. Super indico',
       rating: 5,
+      timeAgo: '6 months ago'
     },
     {
-      name: 'Juliana Costa',
-      role: 'CFP® Independente',
+      name: 'Rafael Bandeira',
+      role: '1 review',
       content:
-        'Finalmente encontrei uma formação que une teoria sólida com prática do mercado. Os professores são extremamente qualificados e o networking é sensacional.',
+        'Minha experiência foi ótima com a i9, aulas muito bem planejadas e de fácil compreensão, plataforma muito intuitiva. recomendo a todos.',
       rating: 5,
+      timeAgo: '4 months ago'
     },
     {
-      name: 'Carlos Eduardo Lima',
-      role: 'Consultor em Transição de Carreira',
+      name: 'Gilson de Souza',
+      role: '1 review',
       content:
-        'Mudei de área aos 45 anos e hoje sou realizado profissionalmente. O curso me deu ferramentas para começar do zero e construir uma carreira sólida em planejamento financeiro.',
+        'Sou graduado em Gestão Pública, e fiz duas pós-graduação na I9 Educação. Curso de Direitos Humanos e Ciências Jurídicas, A mesma oferece conteúdo atualizado, uma plataforma muito boa. Recomento a i9 Educação pra quem quer fazer uma pós na área de Direito. Só benção!',
       rating: 5,
+      timeAgo: '6 months ago'
+    },
+    {
+      name: 'Kamila Barbosa',
+      role: 'Local Guide · 12 reviews',
+      content:
+        'Não tenho que falar aprendi muito são excelentes e me tiram dúvidas no que preciso estão sempre a disposição obrigada i9',
+      rating: 5,
+      timeAgo: '4 months ago'
     },
   ];
 
@@ -61,7 +74,7 @@ const TestimonialsCarousel = () => {
             O que nossos <span className="text-gradient">alunos dizem</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Histórias reais de transformação profissional e sucesso no mercado financeiro.
+            Avaliações reais de alunos da Faculdade i9 no Google.
           </p>
         </motion.div>
 
