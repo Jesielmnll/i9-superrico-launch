@@ -5,28 +5,18 @@ import { Linkedin } from 'lucide-react';
 const TeamSection = () => {
   const team = [
     {
-      name: 'Dr. Roberto Martins',
-      role: 'Coordenador Acadêmico i9',
-      credentials: 'PhD em Economia - USP',
-      description: 'Especialista em mercado financeiro com 20 anos de experiência em instituições bancárias.',
+      name: 'Carlos Castro',
+      role: 'CEO da SuperRico',
+      credentials: 'CFP®, Engenheiro | FGV, Insper, MIT',
+      description: 'Fundador da SuperRico e membro do Conselho da Planejar (entidade que certifica o CFP® no Brasil). É Engenheiro com formação executiva pela FGV, Insper e MIT. Planejador Financeiro CFP® e consultor autorizado pela CVM. A maior autoridade para te ensinar a gerir riscos e investimentos.',
+      initials: 'CC',
     },
     {
-      name: 'Ana Paula Costa',
-      role: 'Diretora de Metodologia SuperRico',
-      credentials: 'CFP®, MBA em Finanças',
-      description: 'Planejadora financeira certificada, responsável pela metodologia de saúde financeira.',
-    },
-    {
-      name: 'Prof. Carlos Eduardo',
-      role: 'Especialista em Investimentos',
-      credentials: 'CFA, Mestre em Finanças',
-      description: 'Ex-gestor de fundos com R$ 2 bilhões sob gestão, professor de estratégias de investimento.',
-    },
-    {
-      name: 'Dra. Mariana Silva',
-      role: 'Psicóloga Econômica',
-      credentials: 'PhD em Behavioral Finance',
-      description: 'Pesquisadora em comportamento financeiro e tomada de decisão sob incerteza.',
+      name: 'Clay Gonçalves',
+      role: 'Gerente de Projetos SuperRico',
+      credentials: 'CFP®, Planejadora Financeira',
+      description: 'Planejadora Financeira CFP® com uma trajetória única de transição de carreira: da Saúde e Polícia Civil para o mercado financeiro. Especialista em diagnósticos precisos e construção de hábitos saudáveis, ela ensina como o uso inteligente do dinheiro gera liberdade e autonomia.',
+      initials: 'CG',
     },
   ];
 
@@ -41,15 +31,14 @@ const TeamSection = () => {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Aprenda com os <span className="text-gradient">melhores do mercado</span>
+            Aprenda com a <span className="text-gradient">Elite do Planejamento Financeiro</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Professores doutores, certificados e com experiência comprovada em
-            planejamento financeiro e consultoria.
+            Profissionais certificados CFP® com experiência comprovada em planejamento financeiro e gestão de riscos.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {team.map((member, index) => (
             <motion.div
               key={index}
@@ -59,27 +48,27 @@ const TeamSection = () => {
               transition={{ delay: index * 0.1, duration: 0.6 }}
             >
               <Card className="h-full hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/20">
-                <CardContent className="p-6 text-center space-y-4">
+                <CardContent className="p-8 text-center space-y-4">
                   {/* Avatar */}
-                  <div className="w-24 h-24 mx-auto rounded-full bg-gradient-cta flex items-center justify-center text-white text-3xl font-bold shadow-lg">
-                    {member.name.split(' ').map(n => n[0]).join('')}
+                  <div className="w-28 h-28 mx-auto rounded-full bg-gradient-cta flex items-center justify-center text-white text-4xl font-bold shadow-lg">
+                    {member.initials}
                   </div>
 
                   <div>
-                    <h3 className="text-lg font-bold mb-1">{member.name}</h3>
-                    <p className="text-sm text-primary font-semibold">{member.role}</p>
-                    <p className="text-xs text-muted-foreground mt-1">
+                    <h3 className="text-2xl font-bold mb-2">{member.name}</h3>
+                    <p className="text-base text-primary font-semibold mb-1">{member.role}</p>
+                    <p className="text-sm text-muted-foreground font-medium">
                       {member.credentials}
                     </p>
                   </div>
 
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-base text-muted-foreground leading-relaxed">
                     {member.description}
                   </p>
 
-                  <button className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors">
-                    <Linkedin size={16} />
-                    <span className="text-sm font-medium">LinkedIn</span>
+                  <button className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors mt-4">
+                    <Linkedin size={18} />
+                    <span className="text-sm font-medium">Ver Perfil no LinkedIn</span>
                   </button>
                 </CardContent>
               </Card>

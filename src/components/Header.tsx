@@ -43,9 +43,9 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logos */}
           <div className="flex items-center gap-3 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg shadow-sm">
-            <img src={logoI9} alt="i9 Educação" className="h-10 md:h-12 w-auto object-contain" />
+            <img src={logoI9} alt="i9 Educação Faculdade" className="h-10 md:h-12 w-auto object-contain" />
             <span className="text-primary font-bold text-xl">+</span>
-            <img src={logoSuperRico} alt="SuperRico" className="h-8 md:h-10 w-auto object-contain" />
+            <img src={logoSuperRico} alt="SuperRico - Saúde Financeira" className="h-10 md:h-12 w-auto object-contain" />
           </div>
 
           {/* Desktop Navigation */}

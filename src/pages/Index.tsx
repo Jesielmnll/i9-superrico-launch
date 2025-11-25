@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
-import LogoSection from '@/components/LogoSection';
 import ProblemSection from '@/components/ProblemSection';
 import SolutionSection from '@/components/SolutionSection';
 import ContentCarousel from '@/components/ContentCarousel';
@@ -27,15 +26,14 @@ const Index = () => {
       <Header />
       <main>
         <HeroSection />
-        <LogoSection />
         <ProblemSection />
         <SolutionSection />
         <ContentCarousel />
         <TeamSection />
         <TestimonialsCarousel />
         <CertificateSection />
-        <FAQSection />
         <ContactForm />
+        <FAQSection />
       </main>
       <Footer />
     </div>
