@@ -54,32 +54,32 @@ const SolutionSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16">
-          {features.map((feature, index) => {
-            const isEven = index % 2 === 0;
-
-            return (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: isEven ? -30 : 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.15, duration: 0.6 }}
-                className="flex gap-4"
-              >
-                <div className="flex-shrink-0">
-                  <div className="w-14 h-14 rounded-xl bg-gradient-cta flex items-center justify-center shadow-lg">
-                    <feature.icon className="w-7 h-7 text-white" />
+        <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-16 max-w-6xl mx-auto">
+          {features.map((feature, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1, duration: 0.6 }}
+            >
+              <Card className="h-full hover:shadow-xl transition-all duration-300 border-2 border-primary/20 bg-gradient-to-br from-background to-muted/30">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <feature.icon className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
+                      <p className="text-muted-foreground">
+                        {feature.description}
+                      </p>
+                    </div>
                   </div>
-                </div>
-
-                <div>
-                  <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
-                  <p className="text-muted-foreground">{feature.description}</p>
-                </div>
-              </motion.div>
-            );
-          })}
+                </CardContent>
+              </Card>
+            </motion.div>
+          ))}
         </div>
 
         {/* Partnership Visual */}
